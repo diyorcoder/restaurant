@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+<body>
+    <header class="sticky">
+        <a href="#" class="logo">
+            <span class="r">D</span>
+            <span class="e">I</span>
+            <span class="s">Y</span>
+            <span class="g">O</span>
+            <span class="a">R</span>
+            <span class="u">B</span>
+            <span class="r">E</span>
+            <span class="A">K</span>
+        </a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li><a href="#banner" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu();">About</a></li>
+            <li><a href="#menu" onclick="toggleMenu();">Menu</a></li>
+            <li><a href="#testimonials" onclick="toggleMenu();">Testimonials</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+        </ul>
+    </header>
+    <section id="banner" class="banner">
+        <div class="content">
+            <h2 class="h2">Diyorbek restaurant</h2>
+            <p>A restaurant is a business that prepares and serves food and drinks to customers. Meals are generally served and eaten on the premises, but many restaurants also offer take-out and food delivery services. </p>
+            <a class="btn" href="#">0ur Menu</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="row">
+            <div class="col50">
+                <h2 class="titleText"><span>A</span>bout Us</h2>
+                <p>A restaurant is a business that prepares and serves food and drinks to customers. Meals are generally served and eaten on the premises, but many restaurants also offer take-out and food delivery services.</p>
+            </div>
+            <div class="col50">
+                <div class="imgBx">
+                    <img src="img1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu" id="menu">
+        <div class="title">
+            <h2 class="titleText">Our <span>M</span>enu</h2>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="lavash.jfif" alt="">
+                </div>
+                <div class="text">
+                    <h3>Special Lavash</h3>
+                </div>
+            </div>
+            
+            <div class="box">
+                <div class="imgBx">
+                    <img src="hamburger.webp" alt="">
+                </div>
+                <div class="text">
+                    <h3>Special Hamburger</h3>
+                </div>
+            </div>
+            
+            <div class="box">
+                <div class="imgBx">
+                    <img src="chees.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Special Cheeseburger</h3>
+                </div>
+            </div>
+            
+            <div class="box">
+                <div class="imgBx">
+                    <img src="salads.webp" alt="">
+                </div>
+                <div class="text">
+                    <h3>Special Salads</h3>
+                </div>
+            </div>
+            
+            <div class="box">
+                <div class="imgBx">
+                    <img src="kabob.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Special Shashlik</h3>
+                </div>
+            </div>
+            
+            <div class="box">
+                <div class="imgBx">
+                    <img src="tabaka.jfif" alt="">
+                </div>
+                <div class="text">
+                    <h3>Special Chicken</h3>
+                </div>
+            </div>
+        </div>
+        <div class="title">
+            <a href="#" class="btn">View All</a>
+        </div>  
+    </section>
+    <section class="testimonials" id="testimonials">
+        <div class="title white">
+            <h2 class="titleText">They <span>S</span>aid About Us</h2>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="testi1.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p>Diyorbek restaurant is very beautiful, big, luxurious. I come to this restaurant often. I recommend you come to this restaurant. This restaurant is the best.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="testi2.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p>Diyorbek restaurant is very beautiful, big, luxurious. I come to this restaurant often. I recommend you come to this restaurant. This restaurant is the best.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="testi3.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p>Diyorbek restaurant is very beautiful, big, luxurious. I come to this restaurant often. I recommend you come to this restaurant. This restaurant is the best.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact" id="contact">
+        <div class="title">
+            <h2 class="titleText"><span>C</span>ontact Us</h2>
+        </div>
+        <div class="contactForm">
+            <h3>Send Messege</h3>
+            <div class="inputBox">
+                <input type="text" placeholder="Name">
+            </div>
+            <div class="inputBox">
+                <input type="text" placeholder="Email">
+            </div>
+            <div class="inputBox">
+                <textarea placeholder="Message"></textarea>
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Send">
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        window.addEventListener('scroll', function(){
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+    function toggleMenu(){
+        const menuToggle = document.querySelector('.menuToggle');
+        const navigation = document.querySelector('.navigation');
+        menuToggle.classList.toggle('active');
+        navigation.classList.toggle('active')
+    }
+    </script>
+</body>
+</html>
